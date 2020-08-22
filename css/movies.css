@@ -1,0 +1,192 @@
+/* styling the banner section */
+/* first need to make the position of the elements under the banner 
+section relative to it */
+
+.container
+{
+	width: 70vw;
+}
+
+/* .ContentBody
+{
+	background-color: var(--normalBackground);
+} */
+
+#banner
+{
+	width: 100%;
+	position: relative;
+	height: 40vw; /* settting the height according to width makes it responsive */
+	z-index: -2;
+}
+#banner img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#banner .title
+{
+	position: absolute;
+	padding-top: 30vw;
+	left: 5%;
+	z-index: 1;
+}
+
+#banner .title span
+{
+	display: block;
+	padding: 10px;
+	font-size: 3vw;
+	color: var(--darkText);
+	background-color: rgba(204, 174, 98, 0.2);
+	border-radius: 15px;
+	opacity: 0.8;
+	text-transform: capitalize;
+	border: 1px solid rgba(204, 174, 98, 0.5);
+	/* background-blend-mode: screen; */
+}
+
+/* creating an overlay over the banner image */
+#banner:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--darkOverLay);
+	opacity: 0.5;
+	z-index: 1;
+}
+
+/* styling the text content section */
+
+/* styling genreDiv */
+
+#genreList
+{
+	background: rgba(204, 174, 98, 0.2);
+	border-radius: 15px;
+	border: 1px solid rgba(204, 174, 98, 0.5);
+	margin: 20px 0;
+	overflow: hidden;
+}
+
+#genreList .genreName
+{
+	display: block;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+#genreList .genreName:hover, #genreList .genreName.active
+{
+	background: var(--navBarColor);
+}
+
+#completeList
+{
+	padding-top: 30px;
+}
+
+.listTitle
+{
+	display: block;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding: 5px;
+	margin: 10px 0;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.movieList
+{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,150px);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.card
+{
+	margin: 10px auto;
+	width: 100%;
+	height: 100%;
+	transition: all linear 0.3s;
+}
+
+.card:hover
+{
+	transform: scale(0.9);
+}
+
+.card img
+{
+	border-radius: 5%;
+	width: 100%;
+	height: 225px;
+	object-fit: cover;
+}
+.card .title span
+{
+	margin: 5px 0;
+	display: block;
+	overflow: hidden;
+}
+
+.card .title .name
+{
+	color: var(--menuTextColor);
+	letter-spacing: 3px;
+}
+
+.card .title .dname
+{
+	color: var(--darkText);
+	letter-spacing: 1px;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+/* making the layout responsive */
+
+@media screen and (min-width: 770px ) {
+	
+	.ContentBody
+	{
+		display: grid;
+		grid-template-columns: 200px 10% 1fr;
+		justify-content: space-around;
+		grid-row-gap: 30px;
+	}
+	
+	.ContentBody #genreDiv
+	{
+		grid-column: 1/2;
+		grid-row-start: 1;
+		grid-row-end: 4;
+	}
+	.ContentBody #recomendList, .ContentBody #completeList
+	{
+		padding-top: 0;
+		grid-column: 3/4;
+	}
+	.listTitle
+	{
+		font-size: 20px;
+	}
+
+}

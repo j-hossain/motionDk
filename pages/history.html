@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>History of Danish Films - Motion</title>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/about.css">
+		<link rel="stylesheet" href="../css/all.min.css">
+		<link rel="icon" sizes="16x16" type="image/png" href="../images/logo/icons5.png">
+	</head>
+	<body>
+		
+		<!-- starting the navbar  -->
+		<div id="navBar">
+			<div class="container"> <!--this keeps everything at the center of the screen -->
+			<div class="navMain">
+				<div class="logo">
+					<a href="../index.html" class="">
+						<img src="../images/logo/logos-01.png" alt="">
+					</a>
+				</div>
+				<div class="nav">
+					
+					<!-- this element is only displayed when screen size is atmost 768px -->
+					<span id="menu" onclick="toogleCollapse()" class="menuHidden">MENU</span>
+					
+					<ul id="navigation" class="collapse">
+						<li class="navItem"><a class="navLink" href="../index.html">Home</a></li>
+						<li class="navItem"><a class="navLink" href="about.html">About</a></li>
+						<li class="navItem"><a class="navLink" href="movies.html">Movies</a></li>
+						<li class="navItem searchBox">
+							<form action="searches.html"> <!-- if the form is submitted , it take to this link with search parrams -->
+								<input name="name" class="search" type="text" placeholder="Movie name">
+								<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Ending of navBar -->
+	
+	<!-- Everything inside a container -->
+	<div class="container">
+		<!-- Banner Image -->
+		<div id="banner">
+			<img src="../images/Movies/BannerImage/hamsun.jpg" alt="">
+			<div class="title">
+				<span>Discover a part of Danish culture</span>
+				<span>Oplev en del af dansk kultur</span>
+			</div>
+		</div>
+		<!-- banner section done -->
+		
+		<div class="contentBody">
+			
+			<div class="heading">
+				<h1>Film History</h1>
+			</div>
+
+			<div class="textContentBody">
+				<div class="textContent">
+					<h3 class="title">Beginning: </h3>
+					<p class="text">Although Danish films became a worldwide recognition in the 1990s, the local industry had been thriving since 1897, for a century before that.
+						Danish cinema pioneer Peter Elfelt, a photographer, was the first Dane to make a film. Between the years of 1896 and 1912, he produced around 200 documentary films on life in Denmark. The Danish filmmaker CarlTheoderDreyer (1889–1968) is considered one of the greatest directors in the history of cinema. In the modern era, notable filmmakers in Denmark include LarsvonTrier, who co-created the Dogme95 film movement, and multiple award-winners Sussane Bier and Nicolas Winding REfn.
+					</p>
+				</div>
+				<div class="textContent">
+					<h3 class="title">Nordisk Film Company: </h3>
+					<p class="text">
+						In 1906, the Danish production company Nordisk Film was founded, and it soon decided to dedicate itself to making full-length feature films for export. Its success made Denmark a centre for filmmaking in Europe and launched the career of Asta Nielsen, Europe's first female movie star. But the war, especially the cultural and trade war, ended this dominant position, which Danish cinema never regained!
+					</p>
+				</div>
+			</div>
+			
+			<!-- it is kept out of the textContent Body , since it will not be display flexed in bigger screens -->
+			<div class="textContent" style = "width: 90%">
+				<h3 class="title" style = "width: 100%">The 21st Century: </h3>
+				<p class="text" style = "width: 100%">
+					The 21st century's first decade proved difficult for a number of Denmark's most established directors, includingLarsvonTrier, although things started well with his Nicole Kidman -starring Dogville (2003), a provocative stylistic experiment filmed on a black sound stage with little beyond white floor markings to indicate the sets. Its sequel Manderlay (2005), exploring the issue of slavery, continued this stylistic device but was largely ignored by audiences.Thomas Vinterberg, who had gained worldwide recognition with The Celebration (1998), made two very expensive English-language flops, It’s all about love (2003) and Dear Wendy (2005),
+					In 2008, Danish films sold over 4 million tickets at the Danish boxoffice, the biggest number since 1981, but the relief was brief, as Danish films in the first five months of 2009 turned out to have the lowest ticket-sales since 2005.
+					Danish cinema nonetheless remains highly respected internationally, and Danish films (today almost exclusively consisting of social realist dramas, social realist comedies) receive many awards at major international film festivals.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer section -->
+	<div id="footer">
+		<div class="container">
+			<div class="logo">
+				<img src="../images/logo/logos-01.png" alt="">
+			</div>
+			<div class="copyright">
+				<span>Copyright &#169 2020 Motion.co. All rights resereved</span>
+			</div>
+			<div class="disclaimer">
+				<span>Disclaimer: This site does not store any data on its server.</span>
+			</div>
+		</div>
+	</div>
+	<!-- footer section done -->
+
+	<script type="text/javascript" src="../js/common.js"></script>
+</body>
+</html>

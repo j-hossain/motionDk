@@ -1,0 +1,130 @@
+/* styling the banner section */
+/* first need to make the position of the elements under the banner 
+section relative to it */
+
+.container
+{
+	width: 70vw;
+}
+
+/* styling the text content section */
+
+.contentBody
+{
+	color: var(--darkText);
+}
+
+/* styling the quick info section */
+.quickInfo div
+{
+	padding: 10px 0;
+}
+
+.quickInfo div p
+{
+	text-transform: capitalize;
+	padding: 5px 0;
+	font-size: 14px;
+}
+
+.quickInfo .name
+{
+	color: var(--menuTextColor);
+	font-size: 24px;
+	letter-spacing: 2px;
+}
+
+.quickInfo .genres
+{
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+
+.quickInfo .image img
+{
+	width: 300px;
+	object-fit: cover;
+	border-radius: 5%;
+}
+
+/* done styling the quick info */
+
+/* styling the details info */
+.details
+{
+	padding: 10px 0;
+}
+
+.details div
+{
+	padding: 5px 0;	
+	text-align: justify;
+	line-height: 25px;
+}
+
+.details div .title
+{
+	text-transform: capitalize;
+	color: var(--menuTextColor);
+	letter-spacing: 1px;
+	font-weight: bold;
+	text-align: left;
+}
+
+
+/* making the layout responsive */
+
+@media screen and (min-width: 768px ) {
+	
+	.quickInfo
+	{
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.quickInfo .info
+	{
+		padding-top: 50px;
+	}
+
+	.quickInfo div p
+	{
+		text-transform: capitalize;
+		padding: 5px 0;
+		font-size: 16px;
+	}
+
+	.quickInfo .image img
+	{
+		width: 250px;
+	}
+
+}
+
+@media screen and (min-width: 1080px ) {
+	
+
+	.quickInfo .name
+	{
+		font-size: 26px;
+		letter-spacing: 4px;
+	}
+
+	.quickInfo .genres
+	{
+		font-size: 20px;
+		letter-spacing: 3px;
+	}
+	
+}
+
+@media screen and (max-width: 375px ) {
+	
+	.quickInfo .image img
+	{
+		width: 225px;
+	}
+
+}
+
+

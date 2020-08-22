@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Motion</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/homepage.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="icon" sizes="16x16" type="image/png" href="images/logo/icons5.png">
+</head>
+<body>
+	
+	<!-- starting the navbar  -->
+	<div id="navBar">
+
+	 	<div class="container"> <!--this keeps everything at the center of the screen -->
+			<div class="navMain">
+				<div class="logo">
+					<a href="index.html" class="">
+						<img src="images/logo/logos-01.png" alt="">
+					</a>
+				</div>
+				<div class="nav">
+					
+					<!-- this element is only displayed when screen size is atmost 768px -->
+					<span id="menu" onclick="toogleCollapse()" class="menuHidden">MENU</span>
+					
+					<ul id="navigation" class="collapse">
+						<li class="navItem active"><a class="navLink" href="index.html">Home</a></li>
+						<li class="navItem"><a class="navLink" href="pages/about.html">About</a></li>
+						<li class="navItem"><a class="navLink" href="pages/movies.html">Movies</a></li>
+						<li class="navItem searchBox">
+							<form action="pages/searches.html">  <!-- if the form is submitted , it take to this link with search parrams -->
+								<input name="name" class="search" type="text" placeholder="Movie name">
+								<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Ending of navBar -->
+
+	<!-- The carousel silder -->
+	<div id="carouselMain">
+		
+		<!-- the inner properties will be added by javascript using the data file -->
+		<div id="carousel">
+
+			<!--Cloning the last slide to the first for sliding effect  -->
+			<div class="carouselItem" id="lastClone">
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+
+			<div class="carouselItem">
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+
+			<div class="carouselItem">
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+			
+			<div class="carouselItem">
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+			
+			<div class="carouselItem">
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+			
+			<div class="carouselItem">
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+
+			<!--Cloning the first slide to the last for sliding effect  -->
+			<div class="carouselItem" id="firstClone"> 
+				<div class="title">
+					<span class="name"></span>
+					<span class="genre"></span>
+				</div>
+				<img src="" alt="">
+			</div>
+
+		</div>
+		
+		<!-- icons added from fontawesome -->
+		<button id="prevbtn" class="carouselBtn" onclick="gotoPrev()"><i class="fas fa-chevron-left"></i></button>
+		<button id="nextbtn" class="carouselBtn" onclick="gotoNext()"><i class="fas fa-chevron-right"></i></button>
+
+	</div>
+	<!-- the carousel slider ends -->
+
+	<!-- the bottom section with general links -->
+
+	<div id="usefulLinks">
+		
+		<div class="uLink">
+			<a href="pages/history.html" class="">Danish film history</a>
+		</div>
+		<div class="uLink">
+			<a href="pages/topMovies.html" class="">Top movies</a>
+		</div>
+		<div class="uLink">
+			<a href="pages/movies.html" class="">Drama</a>
+			<span>: most popular danish genre</span>
+		</div>
+		
+	</div>
+	
+	<!-- footer section -->
+	<div id="footer">
+		<div class="container">
+			<div class="logo">
+				<img src="images/logo/logos-01.png" alt="">
+			</div>
+			<div class="copyright">
+				<span>Copyright &#169 2020 Motion.co. All rights resereved</span>
+			</div>
+			<div class="disclaimer">
+				<span>Disclaimer: This site does not store any data on its server.</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <script type="text/javascript" src="js/jsonFetch.js"></script> -->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/homepage.js"></script>
+</body>
+</html>

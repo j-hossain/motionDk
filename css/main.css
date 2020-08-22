@@ -1,0 +1,261 @@
+
+/* This page contains the css that are common in all pages  */
+
+/* The CSS variables */
+:root
+{
+	--navBarColor : linear-gradient(to top,#cea12f, #dcbd64, #ccae62);
+	/* --navBarColor2 : #ccae62; */
+	--menuTextColor: #e8e8e8;
+	--menuTextHoverColor: #ba1818;
+	--normalBackground: linear-gradient(90deg, #181818,#272525, #181818); /* #487eb0; */
+	--darkText: #a8a8a8;
+	--darkOverLay: linear-gradient(to top,#000, #383838, #000);;
+}
+
+/* universal selector */
+*
+{
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+	font-family: sans-serif;
+	transition: all linear 0.3s;
+}
+
+/* clearing the default styles on anchor tags and list tags */
+a,a:hover
+{
+	text-decoration: none;
+}
+
+ul,li
+{
+	list-style: none;
+}
+
+body 
+{
+	background: var(--normalBackground);
+}
+
+/* Since the navbar is going to be everywhere, I am keeping it here */
+
+/* this class keeps everything inside it to the centre of the main div */
+.container
+{
+	width: 70vw;
+	margin: 0 auto;
+}
+
+
+/* styles for the navbar */
+#navBar 
+{
+	box-shadow: -1px 1px 6px #000;
+	position: sticky; /* so that it remains on the top even when scrolled */
+	top: 0px;
+	z-index: 5;
+	width: 100%;
+	padding: 10px 0 ;
+	background: var(--navBarColor);
+}
+
+#navBar .navMain
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#navBar .logo img
+{
+	width: 30%;
+	min-width: 100px;
+}
+
+ /*hides the menu toogling button on bigger screens*/
+ /*hides the menu toogling button on bigger screens*/
+.nav .menuHidden
+{
+	display: none;
+	letter-spacing: 3px;
+	text-align: left;
+	cursor: pointer;
+	padding: 10px;
+	color: var(--menuTextColor);
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom-right-radius: 15px;
+	border-top-left-radius: 15px;
+	transition: all linear 0.3s;
+	margin: 0 5px;
+	text-transform: uppercase;
+}
+
+.menuHidden:hover
+{
+	background-color: #e8e8e8;
+	color: var(--menuTextHoverColor);
+}
+
+.nav .collapse
+{
+	display: flex;
+	margin-left: auto;
+	box-sizing: border-box;
+	transition: all linear 0.3s;
+	letter-spacing: 3px;
+}
+
+#navigation .navItem
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#navigation .navItem .navLink
+{
+	padding: 5px 10px;
+	color: var(--menuTextColor);
+	font-size: 16px;
+	font-weight: bold;
+	border-radius:  15px;
+	transition: all linear 0.3s;
+	margin: 0 5px;
+	text-transform: uppercase;
+}
+
+#navigation .searchBox form
+{
+	margin: 0 auto;
+	width: 160px;
+	border-radius: 20px;
+	background: #e8e8e8;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+#navigation .search
+{
+	padding: 5px 0 5px 15px;
+	color: var(--menuTextHoverColor);
+	outline: none;
+	border: none;
+	background: none;
+	width: 75%;
+}
+
+#navigation .searchBtn
+{
+	cursor: pointer;
+	color: var(--menuTextHoverColor);
+	border: none;
+	outline: none;
+	height: 30px;
+	width: 30px;
+	background: #d8d8d8;
+}
+
+#navigation .navItem:hover .navLink,#navigation .navItem.active a
+{
+	background: #e8e8e8;
+	color: var(--menuTextHoverColor);
+}
+
+/* this class will be toogled by javascript */
+.navToogle
+{
+	height:  200px !important;
+	opacity: 0.95 !important;
+}
+/* this class is on almost every page */
+.contentBody
+{
+	color: var(--menuTextColor);
+	padding: 50px 0;
+}
+
+/*stylling the footer */
+
+#footer
+{
+	color: var(--menuTextColor);
+	text-shadow: 1px 2px 5px #787878;
+	background: var(--navBarColor);
+	text-align: center;  /* taking everything to the middle of thier div, even the logo */
+}
+
+#footer .logo img
+{
+	width: 180px;
+}
+
+#footer .container div
+{
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Making the navBar responsive */
+@media screen and (min-width: 768px){
+
+	#footer .container
+	{
+		display: grid;
+		grid-template-columns: 20% 40% 40%; /* logo - copyright - desclaimer */
+		width: 100%;
+	}
+
+	#footer .logo img
+	{
+		width: 120px;
+	}
+
+	#footer .container div
+	{
+		padding: 10px 0;
+	}
+}
+@media screen and (max-width: 768px) {
+	
+	.nav .menuHidden
+	{
+		display: block;
+	}
+	
+	/* thiss css applies when the items are collapsed or on bigger sceerns */
+	.nav .collapse
+	{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 0;
+		transform: translateY(4%);
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		box-sizing: border-box;
+		background: var(--navBarColor);
+		opacity: 0;
+		overflow: hidden;
+	}
+
+	#navigation .navItem
+	{
+		margin-top: 15px ;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	
+	#navigation .navItem .navLink ,.nav .menuHidden
+	{
+		font-size: 14px;
+	}
+
+}

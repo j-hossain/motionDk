@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About - Motion</title>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/about.css">
+		<link rel="stylesheet" href="../css/all.min.css">
+		<link rel="icon" sizes="16x16" type="image/png" href="../images/logo/icons5.png">
+	</head>
+	<body>
+		
+		<!-- starting the navbar  -->
+		<div id="navBar">
+			<div class="container"> <!--this keeps everything at the center of the screen -->
+			<div class="navMain">
+				<div class="logo">
+					<a href="../index.html" class="">
+						<img src="../images/logo/logos-01.png" alt="">
+					</a>
+				</div>
+				<div class="nav">
+					
+					<!-- this element is only displayed when screen size is atmost 768px -->
+					<span id="menu" onclick="toogleCollapse()" class="menuHidden">MENU</span>
+					
+					<ul id="navigation" class="collapse">
+						<li class="navItem"><a class="navLink" href="../index.html">Home</a></li>
+						<li class="navItem active"><a class="navLink" href="about.html">About</a></li>
+						<li class="navItem"><a class="navLink" href="movies.html">Movies</a></li>
+						<li class="navItem searchBox">
+							<form action="searches.html"> <!-- if the form is submitted , it take to this link with search parrams -->
+								<input name="name" class="search" type="text" placeholder="Movie name">
+								<button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Ending of navBar -->
+	
+	<!-- Everything inside a container -->
+	<div class="container">
+		<!-- Banner Image -->
+		<div id="banner">
+			<img src="../images/Movies/BannerImage/inabetterworld.jpg" alt="">
+			<div class="title">
+				<span>Discover a part of Danish culture</span>
+				<span>Oplev en del af dansk kultur</span>
+			</div>
+		</div>
+		<!-- banner section done -->
+		
+		<div class="contentBody">
+			<div class="heading">
+				<h1>explore Danish film, be entertained</h1>
+			</div>
+			<div class="textContentBody">
+				
+				<div class="textContent">
+					<h3 class="title">Danish Films: From comedy, Noir to Drama and Action</h3>
+					<p class="text">Danish cinema has been operating for many decades, since the late 19th century. Originally, productions were revolved around comedies, released nationally, the rise of erotic films became a popular export for the country and thus increased the industries reputation.
+						During the early 20th century, silent full-length feature films, where a success internationally and developed the notoriety of actress Asta Nielsen. From the seventies the development of the Danish Film institution broadened the scope of film production. State subsidies were offered to particular movie projects, which created a revival of Danish films. Since then, there has been changes to cinema from “Dogma” filmmaking, to see filmmakers creating movies in a more true and simplistic manner.
+						Emerging into the 21st century, Danish film saw greater international success with directors such as Lars von Trier, Nicolai Winding Refn, Susanne Bier, Thomas Vinterberg, Nikolaj Arcel and Martin Zandvliet winning Oscars and legitimising the film industry.
+					</p>
+				</div>
+				<div class="textContent">
+					<h3 class="title">Develop your language skills through movies</h3>
+					<p class="text">
+						Movies have the ability for you to learn a language – or at least improve your ability to converse more effectively.  Our database of films range between different genres throughout different decades, giving you an insight into not only the language, but the humour, social customs and how much the Danes love a good drama!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer section -->
+	<div id="footer">
+		<div class="container">
+			<div class="logo">
+				<img src="../images/logo/logos-01.png" alt="">
+			</div>
+			<div class="copyright">
+				<span>Copyright &#169 2020 Motion.co. All rights resereved</span>
+			</div>
+			<div class="disclaimer">
+				<span>Disclaimer: This site does not store any data on its server.</span>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/common.js"></script>
+</body>
+</html>
